@@ -13,7 +13,7 @@ const allOperators = document.querySelectorAll(".operator_btn");
 let valArray = [];
 let arrOperator = [];
 let countChecker = 0;
-let countStorer;
+let countStorer = 0;
 // functions
 function arithematicOperations(e) {
   const targ = e.target.closest(".operator_btn");
@@ -68,5 +68,11 @@ plusBtn.addEventListener("click", arithematicOperations.bind(this));
 calculatorKeyArea.addEventListener("click", function (e) {
   if (!e.target.classList.contains("num_btn")) return;
   const val = e.target.value;
-  console.log(val);
+  // console.log(val);
+  if (countChecker === countStorer) {
+    resultContainer.innerText = val;
+  } else {
+    resultContainer.innerText = resultContainer.innerText + val;
+  }
+  countChecker++;
 });
