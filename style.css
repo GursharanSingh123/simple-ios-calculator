@@ -41,6 +41,12 @@ html {
   font-weight: 500;
   background-color: var(--color-btnbg);
   color: inherit;
+  transition: all 1s;
+}
+.btn:hover {
+  color: var(--color-btnbg);
+  background-color: white;
+  cursor: pointer;
 }
 .svg_key_icon {
   height: 30%;
